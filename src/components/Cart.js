@@ -18,7 +18,7 @@ const Cart = ({ cartItems, handleAddProduct, handleRemoveProduct, emptyCart }) =
             <div className="empty-cart">
                 {cartItems.length > 0 && (
                     <button className="empty-cart-button" onClick={emptyCart}>
-                        Empty Cartd
+                        Empty Cart
                     </button>
                 )}
             </div>

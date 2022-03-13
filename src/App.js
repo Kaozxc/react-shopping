@@ -58,7 +58,6 @@ const App = () => {
         <Routes>
           <Route path="/Home" element={<Home />}></Route>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/react-shopping/" element={<Home />}></Route>
           <Route
             path="/Shop"
             element={
