@@ -1,34 +1,34 @@
-import MORTY from '../images/MORTY.png'
-import RICK from '../images/RICK.png';
-import BETH from '../images/BETH.png';
-import JERRY from '../images/JERRY.png';
+import biden from '../images/biden.jpg';
+import garmin from '../images/garmin.webp';
+import gShock from '../images/g-shock.jpg';
+import watchMe from '../images/watchme.webp';
 import uniqid from "uniqid";
 
 const data = {
     productItems: [
         {
             id: uniqid(),
-            name: "New Morty",
-            price: 999,
-            image: MORTY,
+            name: "Garmin Forerunner 245",
+            price: 129,
+            image: garmin,
         },
         {
             id: uniqid(),
-            name: "Used Rick",
-            price: 444,
-            image: RICK,
+            name: "Biden Quartz Watch",
+            price: 204,
+            image: biden,
         },
         {
             id: uniqid(),
-            name: "Very Used Beth",
-            price: 555,
-            image: BETH,
+            name: "Watch Me for girls",
+            price: 100,
+            image: watchMe,
         },
         {
             id: uniqid(),
-            name: "Broken Jerry",
-            price: 111,
-            image: JERRY,
+            name: "Casio G-Shock",
+            price: 400,
+            image: gShock,
         },
     ],
 };
