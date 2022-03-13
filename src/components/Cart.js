@@ -2,13 +2,13 @@ import React from "react";
 import '../App.css'
 
 const Cart = ({ cartItems, handleAddProduct, handleRemoveProduct, emptyCart }) => {
-    const totalPrice = cartItems.reduce((price,item) => price + item.quantity * item.price, 0);
+    const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0);
 
     const handleCheckout = () => {
-        if(cartItems.length === 0) {
+        if (cartItems.length === 0) {
             alert('Cart is empty');
         } else {
-            alert('Thank for your purchase');
+            alert(`Thank for your purchase. Cost here is ${totalPrice}`);
         }
     };
 
