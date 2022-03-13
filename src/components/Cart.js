@@ -8,7 +8,7 @@ const Cart = ({ cartItems, handleAddProduct, handleRemoveProduct, emptyCart }) =
         if (cartItems.length === 0) {
             alert('Cart is empty');
         } else {
-            alert(`Thank for your purchase. Cost is ${totalPrice}`);
+            alert(`Thank for your purchase. Cost here is ${totalPrice}`);
         }
     };
 
@@ -18,7 +18,7 @@ const Cart = ({ cartItems, handleAddProduct, handleRemoveProduct, emptyCart }) =
             <div className="empty-cart">
                 {cartItems.length > 0 && (
                     <button className="empty-cart-button" onClick={emptyCart}>
-                        Empty Cart
+                        Empty Cartd
                     </button>
                 )}
             </div>
