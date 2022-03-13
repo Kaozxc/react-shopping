@@ -8,7 +8,7 @@ const Cart = ({ cartItems, handleAddProduct, handleRemoveProduct, emptyCart }) =
         if (cartItems.length === 0) {
             alert('Cart is empty');
         } else {
-            alert(`Thank for your purchase. Cost here is ${totalPrice}`);
+            alert(`Thank for your purchase. Cost to pay: ${totalPrice}`);
         }
     };
 
