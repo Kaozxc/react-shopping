@@ -53,7 +53,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename='/react-shopping'>
         <Header cartItems={cartItems} />
         <Routes>
           <Route path="/Home" element={<Home />}></Route>
