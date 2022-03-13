@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Header from "./components/Header";
@@ -9,79 +9,80 @@ import Cart from "./components/Cart";
 
 const App = () => {
   const { productItems } = data;
-  const [cartItems, setCartItems ] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   const handleAddProduct = (product) => {
     const productExist = cartItems.find((item) => item.id === product.id);
-    if(productExist) {
+    if (productExist) {
       setCartItems(
-        cartItems.map((item) => 
-        item.id === product.id 
-        ? {
-          ...productExist,
-          quantity: productExist.quantity + 1,
-        }
-        : item
+        cartItems.map((item) =>
+          item.id === product.id
+            ? {
+              ...productExist,
+              quantity: productExist.quantity + 1,
+            }
+            : item
         )
       )
     } else {
-      setCartItems([...cartItems, { ...product, quantity: 1}]);
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
   };
 
   const handleRemoveProduct = (product) => {
     const productExist = cartItems.find((item) => item.id === product.id);
-    if(productExist.quantity === 1) {
+    if (productExist.quantity === 1) {
       setCartItems(cartItems.filter((item) => item.id !== product.id));
     } else {
       setCartItems(
         cartItems.map((item) =>
-            item.id === product.id
-                ? {
-                    ...productExist,
-                    quantity: productExist.quantity - 1,
-                  }
-                : item
+          item.id === product.id
+            ? {
+              ...productExist,
+              quantity: productExist.quantity - 1,
+            }
+            : item
         )
-    );
-}
-};
+      );
+    }
+  };
 
-const emptyCart = () => {
+  const emptyCart = () => {
     setCartItems([]);
-};
+  };
 
   return (
     <div className="App">
-            <BrowserRouter>
-                <Header cartItems={cartItems} />
-                <Routes>
-                    <Route path="/Home" element={<Home />}></Route>
-                    <Route path="/" element={<Home />}></Route>
-                    <Route
-                        path="/Shop"
-                        element={
-                            <Shop
-                                productItems={productItems}
-                                handleAddProduct={handleAddProduct}
-                            />
-                        }
-                    ></Route>
-                    <Route
-                        path="/Cart"
-                        element={
-                            <Cart
-                                cartItems={cartItems}
-                                handleAddProduct={handleAddProduct}
-                                handleRemoveProduct={handleRemoveProduct}
-                                emptyCart={emptyCart}
-                            />
-                        }
-                    ></Route>
-                </Routes>
-            </BrowserRouter>
-        </div>
-    );
+      <BrowserRouter>
+        <Header cartItems={cartItems} />
+        <Routes>
+          <Route path="/Home" element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/react-shopping/" element={<Home />}></Route>
+          <Route
+            path="/Shop"
+            element={
+              <Shop
+                productItems={productItems}
+                handleAddProduct={handleAddProduct}
+              />
+            }
+          ></Route>
+          <Route
+            path="/Cart"
+            element={
+              <Cart
+                cartItems={cartItems}
+                handleAddProduct={handleAddProduct}
+                handleRemoveProduct={handleRemoveProduct}
+                emptyCart={emptyCart}
+              />
+            }
+          ></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
