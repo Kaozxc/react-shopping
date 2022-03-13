@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-shopping/static/css/main.3ee6e824.css",
-    "main.js": "/react-shopping/static/js/main.96b8e73d.js",
-    "static/media/RICK.png": "/react-shopping/static/media/RICK.b966e97d42bbb5974017.png",
-    "static/media/MORTY.png": "/react-shopping/static/media/MORTY.e068c3730bcf651632c2.png",
-    "static/media/JERRY.png": "/react-shopping/static/media/JERRY.25df6251e698013acbec.png",
-    "static/media/BETH.png": "/react-shopping/static/media/BETH.3ba4c50e9268366f18ee.png",
+    "main.js": "/react-shopping/static/js/main.c5f569b2.js",
+    "static/media/g-shock.jpg": "/react-shopping/static/media/g-shock.1e8c9e489bc74896959f.jpg",
+    "static/media/biden.jpg": "/react-shopping/static/media/biden.d19243e08d1d056213b5.jpg",
+    "static/media/garmin.webp": "/react-shopping/static/media/garmin.ed07fe632392f9a053fe.webp",
+    "static/media/watchme.webp": "/react-shopping/static/media/watchme.74b23cf7edf1ee4549a7.webp",
     "index.html": "/react-shopping/index.html",
     "main.3ee6e824.css.map": "/react-shopping/static/css/main.3ee6e824.css.map",
-    "main.96b8e73d.js.map": "/react-shopping/static/js/main.96b8e73d.js.map"
+    "main.c5f569b2.js.map": "/react-shopping/static/js/main.c5f569b2.js.map"
   },
   "entrypoints": [
     "static/css/main.3ee6e824.css",
-    "static/js/main.96b8e73d.js"
+    "static/js/main.c5f569b2.js"
   ]
 }
